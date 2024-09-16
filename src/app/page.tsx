@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Wand2, Feather, Scroll, Book, Sparkles } from 'lucide-react';
+import { Wand2, Feather, Book, Sparkles } from 'lucide-react';
 import Image from "next/image";
 
 const SpellEffect = () => {
@@ -52,7 +52,7 @@ const HomePage = () => {
             </motion.h1>
             <nav className="hidden md:block">
               <ul className="flex space-x-1">
-                {['Great Hall', 'Library', 'Quidditch', 'Potions', 'Spells'].map((item, index) => (
+                {['Great Hall', 'Library', 'Quidditch', 'Potions', 'Spells'].map((item) => (
                   <motion.li
                     key={item}
                     onHoverStart={() => setHoveredNav(item)}
@@ -156,8 +156,8 @@ const HomePage = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                   >
-                    Here, you'll learn to channel your inner magic, brew potions that defy logic, and cast spells
-                    that can change the world. But more than that, you'll forge friendships that last a lifetime,
+                    Here, you&apos;ll learn to channel your inner magic, brew potions that defy logic, and cast spells
+                    that can change the world. But more than that, you&apos;ll forge friendships that last a lifetime,
                     face challenges that test your courage, and unlock the true potential of your magical abilities.
                   </motion.p>
                 </CardContent>
