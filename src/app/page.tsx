@@ -11,7 +11,7 @@ const SpellEffect = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: { clientX: any; clientY: any; }) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
     window.addEventListener('mousemove', handleMouseMove);
@@ -35,6 +35,7 @@ const SpellEffect = () => {
 const HomePage = () => {
   const [hoveredNav, setHoveredNav] = useState(null);
 
+
   return (
     <div className="min-h-screen bg-[url('/cropped.jpg')] bg-cover bg-fixed font-serif text-amber-100">
       <SpellEffect />
@@ -55,6 +56,7 @@ const HomePage = () => {
                 {['Great Hall', 'Library', 'Quidditch', 'Potions', 'Spells'].map((item) => (
                   <motion.li
                     key={item}
+                    // @ts-ignore
                     onHoverStart={() => setHoveredNav(item)}
                     onHoverEnd={() => setHoveredNav(null)}
                   >
